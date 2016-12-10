@@ -4,16 +4,17 @@ import (
 	"fmt"
 
 	"./app"
-	"./logger"
 )
 
 func init() {
-	fmt.Println("Initializing main")
+	fmt.Println("Initializing Main.")
 }
+
 func main() {
-	logger := logger.NewLogger()
-	logger.SetLogLevel("Info")
+	// logger := logger.NewLogger()
+	// logger.SetLogLevel("Info")
 	app := app.NewApp()
-	app.SetLogger(logger)
+	// app.SetLogger(logger)
+	// app.SetConfig(conf)
 	app.Run()
 }

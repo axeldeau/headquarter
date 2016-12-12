@@ -13,8 +13,9 @@ func init() {
 func main() {
 	// logger := logger.NewLogger()
 	// logger.SetLogLevel("Info")
-	app := app.NewApp()
+	a := app.NewApp()
 	// app.SetLogger(logger)
 	// app.SetConfig(conf)
-	app.Run()
+	a.Register("/", app.HelloWorld, "get")
+	a.Run()
 }
